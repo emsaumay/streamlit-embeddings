@@ -1,0 +1,11 @@
+import numpy as np
+import pandas as pd
+
+# Load the embeddings from the file
+embeddings = np.load('embeddings.npy')
+
+# Convert the embeddings to a DataFrame
+embeddings_df = pd.DataFrame(embeddings)
+
+# Save the DataFrame to a text file
+embeddings_df.to_csv('embeddings_file.txt', index=False)
